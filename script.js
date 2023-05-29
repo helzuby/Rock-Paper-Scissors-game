@@ -4,7 +4,7 @@ const scissorsBtn = document.getElementById('scissors');
 const result = document.getElementById('result');
 const playerCount = document.getElementById('player-count');
 const computerCount = document.getElementById('computer-count');
-
+const computerChose = document.getElementById('computer-chose');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -25,8 +25,10 @@ scissorsBtn.addEventListener('click', function() {
 function playGame(playerChoice) {
   const options = ['rock', 'paper', 'scissors'];
   const computerChoice = options[Math.floor(Math.random() * options.length)];
-  
-// To determine when there is a winner, a tie or a lose, certain conditions are to be met.
+
+computerChose.textContent = 'Computer chose: ' + computerChoice;
+
+  // To determine when there is a winner, a tie or a lose, certain conditions are to be met.
   let winner;
   if (playerChoice === computerChoice) {
     winner = "It's a tie!";
@@ -45,5 +47,6 @@ function playGame(playerChoice) {
   }
 
   result.textContent = winner;
+
 }
 

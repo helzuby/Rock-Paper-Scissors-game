@@ -1,10 +1,10 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body{
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 
@@ -22,9 +22,10 @@ body{
   height: 500px;
   width: 600px;
   margin: auto;
+  position: relative;
   border: 3px solid black;
   border-radius: 10px;
-  margin-top: 5rem
+  margin-top: 5rem;
 }
 
  h1 {
@@ -35,22 +36,21 @@ body{
 }
 .playerScore, .computerScore {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 3rem;
+  justify-content: space-evenly; ;
+  margin-top: 2rem;
   font-size: 20px;
 }
 .player-count, .computer-count {
   font-size: 20px;
   text-align: center;
-  margin top: 3rem;
+  margin top: 2rem;
   justify-content: center;
 
 }
-
-.result {
- 	text-align: center;
- 	font-size: 25px
- 	font-color: blue;
+.computerChose{
+  text-align: center;
+  font-size: 25px
+  font-color: #660033;
  
  }
 
@@ -78,9 +78,23 @@ padding-top: 5rem;
  }
 
  .result {
- 	text-align: center;
- 	font-size: 40px;
- 	color: #660033;
- 	margin-top: 3rem;
- 	
- }
+  text-align: center;
+  font-size: 40px;
+  color: #660033;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+ .computerChose {
+  font-size: 25px;
+  color: #660033;
+ 
+}
+
+.computerChose .result{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50% -50%)
+}
+
